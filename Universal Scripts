@@ -1,0 +1,43 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Universal Gui | (Made by Rayver)", "Ocean")
+
+local Tab = Window:NewTab("Info")
+
+local Section = Tab:NewSection("Welcome to Rayver's Hub!")
+
+local Section = Tab:NewSection("Thank You For Using This Hub!")
+
+local Section = Tab:NewSection("Im making my own script ( Not Finish Yet )")
+
+local Tab = Window:NewTab("Main")
+
+local Section = Tab:NewSection("LocalPlayer")
+
+Section:NewSlider("Speed", "You will get an extra Speed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("Jump Power", "You will get an extra Jump", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewButton("Reset", "Reset Your Character!", function()
+    players.Character.Humanoid.Health = 0
+end)
+
+local Tab = Window:NewTab("Others")
+
+local Section = Tab:NewSection("Scripts")
+
+Section:NewButton("Infinite Yield", "?", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section:NewButton("Fly Gui", "?", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/MsL78SwX"))()
+end)
+
+Section:NewButton("Ghost Hub", "?", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+end)
